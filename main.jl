@@ -2,11 +2,11 @@ using Raylib;
 using StatsBase: countmap;
 using Serialization;
 
-include("./gridfbot_commenté.jl");
+include("./grid.jl");
 using .Grid;
 import .Grid: Rectangle, GameState;
 
-include("./botf_code.jl");
+include("./bot.jl");
 
 Base.hash(r::Rectangle, h::UInt) = hash((r.x, r.y, r.w, r.h), h)
 Base.:(==)(a::Rectangle, b::Rectangle) = (a.x, a.y, a.w, a.h) == (b.x, b.y, b.w, b.h)
